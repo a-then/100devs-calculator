@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     margin: 10% 20%;
+     background: lightblue;
+
+}
+
+#calculator,
+.output {
+     border-radius: 10px;
+}
+
+button {
+     background: white;
+     color: black;
+     border-radius: 50%;
+     width: 60px;
+     height: 60px;
+     margin: 0.5rem;
+     font: bold 2rem sans-serif;
+     border: none;
+}
+
+button:hover {
+     border: 5px solid rgb(136, 78, 224)
+}
+
+.operators {
+     background: rgb(196, 174, 228);
+}
+
+.output {
+     background: white;
+     font: 3rem 'Work Sans', sans-serif;
+     padding: 3%;
+     text-align: right;
+     
+
+}
+.previous, .current {
+     border: none;
+     width: 100%;
+     color: black;
+
+}
+.previous {
+     font-size: 2rem;
+     color: rgb(196, 174, 228)
+}
+.current {
+     color: rgb(0, 0, 0);
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+#calculator {
+     background-color: black;
+     padding: 5%;
+     width: 350px;
+     height: 500px;
+     display: grid;
+     grid-template: 1fr repeat(4, 1fr) / repeat(4, 1fr);
+}
+
+.output {
+     grid-area: 1 / 1 / 2 / -1;
+}
+
+.equal {
+     grid-area: 5 / 3 / 6 / 4;
+}
+
+.decimal {
+     grid-area: 5 / 2 / 6 / 3;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
